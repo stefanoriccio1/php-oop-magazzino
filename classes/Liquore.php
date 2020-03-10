@@ -1,9 +1,12 @@
 <?php
 require_once 'Vino.php';
+require_once __DIR__ . '/../traits/GetConsegna.php';
 
 class Liquore extends Vino{
 
 public $temperaturaServizio;
+
+use GetConsegna;
 
 }
 
