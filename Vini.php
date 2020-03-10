@@ -10,7 +10,9 @@ class Vini {
   public $ultimoConsumo;
   public $tipologia;
   public $abbinamenti;
+  public $vitaVino;
 
+  //obbligo ad inserire cantina e setto formato
   public function __construct($_cantina){
     $this->formato = '0,75l';
 
@@ -22,6 +24,8 @@ class Vini {
     $this->$cantina = $_cantina;
   }
 
+
+  //funzione per calcolare gli anni di vita dei vini
   public function consumoIdeale(){
 
   if(empty($this->ultimoConsumo)|| empty($this->annata)){
@@ -29,6 +33,8 @@ class Vini {
   }
    return $this->ultimoConsumo - $this->annata;
   }
+
+
 }
 
 
