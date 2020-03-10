@@ -1,6 +1,7 @@
 <?php
 class Vini {
 
+  public $cantina;
   public $annata;
   public $denominazione;
   public $vitigni;
@@ -9,10 +10,20 @@ class Vini {
   public $consumoIdeale;
   public $tipologia;
   public $abbinamenti;
+
+  public function __construct(){
+    $this->formato = '0,75l';
+  }
 }
 
+
+
 $barbera = new Vini();
-$barbera->tipologia = "Rosso";
+$barbera->annata = '2016';
+$barbera->tipologia = 'Rosso';
+$barbera ->alcol = '14%';
 var_dump($barbera);
+
+
 
 ?>
