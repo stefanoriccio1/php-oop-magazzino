@@ -10,7 +10,6 @@ class Vini {
   public $ultimoConsumo;
   public $tipologia;
   public $abbinamenti;
-  public $vitaVino;
 
   public function __construct($_cantina){
     $this->formato = '0,75l';
@@ -24,6 +23,10 @@ class Vini {
   }
 
   public function consumoIdeale(){
+
+  if(empty($this->ultimoConsumo)|| empty($this->annata)){
+    die('non hai riempito tutti i campi necessari');
+  }
    return $this->ultimoConsumo - $this->annata;
   }
 }
