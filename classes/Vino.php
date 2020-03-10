@@ -42,7 +42,7 @@ class Vino {
     return $this->alcol;
   }
 
-
+ use GetConsegna;
 }
 
 ?>
