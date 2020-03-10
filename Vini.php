@@ -7,9 +7,10 @@ class Vini {
   public $vitigni;
   public $alcol;
   public $formato;
-  public $consumoIdeale;
+  public $ultimoConsumo;
   public $tipologia;
   public $abbinamenti;
+  public $vitaVino;
 
   public function __construct($_cantina){
     $this->formato = '0,75l';
@@ -21,6 +22,10 @@ class Vini {
 
     $this->$cantina = $_cantina;
   }
+
+  public function consumoIdeale(){
+   return $this->ultimoConsumo - $this->annata;
+  }
 }
 
 
@@ -30,14 +35,15 @@ $barbera->annata = '2016';
 $barbera->tipologia = 'Rosso';
 $barbera ->alcol = '14%';
 
-var_dump($barbera);
 
 $gewurztrminer = new VINI('Elena Walch');
 $gewurztrminer->tipologia = 'Bianco';
-$gewurztrminer->annata = '2018';
-$gewurztrminer->consumoIdeale = '2019/2022';
+$gewurztrminer->annata = 2018;
+$gewurztrminer->ultimoConsumo = 2022;
 $gewurztrminer->alcol = '15%';
-var_dump($gewurztrminer);
+echo $gewurztrminer->consumoIdeale() . 'anni';
+
+
 
 $listaVini = [
   $barbera,
@@ -45,7 +51,7 @@ $listaVini = [
 ];
 
 foreach ($listaVini as $vino) {
-  echo $vino->annata . '   ';
+  //echo $vino->annata . '   ';
 }
 
 ?>
