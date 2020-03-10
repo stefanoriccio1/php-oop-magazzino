@@ -13,6 +13,7 @@ class Vino {
   public $tipologia;
   public $abbinamenti;
   public $vitaVino;
+  public $prezzo;
 
   //obbligo ad inserire cantina e setto formato
   public function __construct($_cantina){
