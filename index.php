@@ -18,6 +18,7 @@ echo $gewurztrminer->consumoIdeale() . 'anni ';
 $limoncello = new Liquore('Villa Massa');
 $limoncello->alcol = '30°';
 $limoncello->temperaturaServizio = '3°';
+echo $limoncello->getAlcol();
 echo $limoncello->temperaturaServizio;
 
 

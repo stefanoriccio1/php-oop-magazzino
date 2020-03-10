@@ -35,6 +35,12 @@ class Vino {
    return $this->ultimoConsumo - $this->annata;
   }
 
+  //funzione per prendere grado alcolico
+  public function getAlcol(){
+
+    return $this->alcol;
+  }
+
 
 }
 
