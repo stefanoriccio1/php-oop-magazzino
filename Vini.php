@@ -11,17 +11,25 @@ class Vini {
   public $tipologia;
   public $abbinamenti;
 
-  public function __construct(){
+  public function __construct($_cantina){
     $this->formato = '0,75l';
+
+    if(empty($_cantina)){
+
+      echo 'non hai inserito la cantina';
+    }
+
+    $this->$cantina = $_cantina;
   }
 }
 
 
 
-$barbera = new Vini();
+$barbera = new Vini('Cascina la Barbatella');
 $barbera->annata = '2016';
 $barbera->tipologia = 'Rosso';
 $barbera ->alcol = '14%';
+
 var_dump($barbera);
 
 
