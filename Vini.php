@@ -39,4 +39,13 @@ $gewurztrminer->consumoIdeale = '2019/2022';
 $gewurztrminer->alcol = '15%';
 var_dump($gewurztrminer);
 
+$listaVini = [
+  $barbera,
+  $gewurztrminer
+];
+
+foreach ($listaVini as $vino) {
+  echo $vino->annata . '   ';
+}
+
 ?>
