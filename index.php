@@ -1,5 +1,5 @@
 <?php
-include 'classes/Vino.php'
+include 'classes/Vino.php';
 
 $barbera = new Vini('Cascina la Barbatella');
 $barbera->annata = '2016';
