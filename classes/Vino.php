@@ -1,5 +1,5 @@
 <?php
-class Vini {
+class Vino {
 
   public $cantina;
   public $annata;
