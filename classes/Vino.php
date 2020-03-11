@@ -26,8 +26,7 @@ class Vino {
 
     $this->$cantina = $_cantina;
   }
-
-
+  
   //funzione per calcolare gli anni di vita dei vini
   public function consumoIdeale(){
 
